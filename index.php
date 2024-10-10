@@ -46,6 +46,7 @@ if (isset($_GET['delete'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Upload and List</title>
+    <link rel="icon" href="https://www.directorylister.com/images/favicon.png">
 
     <!-- Dropzone CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.9.3/dropzone.min.css">
@@ -113,7 +114,6 @@ if (isset($_GET['delete'])) {
         a {
             text-decoration: none;
             color: #4caf50; /* رنگ ثابت سبز برای لینک‌ها */
-            font-weight: bold;
             border-bottom: 2px solid transparent;
             padding-bottom: 3px;
             transition: all 0.3s ease-in-out;
@@ -186,7 +186,7 @@ if (isset($_GET['delete'])) {
     // Dropzone configuration
     Dropzone.options.fileUploadZone = {
         paramName: 'file', // The name that will be used to transfer the file
-        maxFilesize: 2, // MB
+        maxFilesize: 200, // MB
         success: function (file, response) {
             window.location.reload(); // Reload the page after a successful upload
         }
